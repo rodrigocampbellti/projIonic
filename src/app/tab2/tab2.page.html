@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form #fc="ngForm">
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label="Nome" label-placement="floating" required fill="outline" placeholder="Digite seu nome"
+          [(ngModel)]="user.nome" name="nome"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label="E-mail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+          label-placement="floating" fill="outline" placeholder="Digite seu e-mail" [(ngModel)]="user.email"
+          name="email"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label="Senha" label-placement="floating" required fill="outline" placeholder="Digite uma senha"
+          [(ngModel)]="user.senha" name="senha"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label="Telefone" label-placement="floating" required fill="outline" placeholder="Digite seu telefone"
+          [(ngModel)]="user.telefone" name="telefone"></ion-input>
+      </ion-item>
+      <ion-item class="pt-10">
+        <ion-button [disabled]="fc.invalid" size="small" (click)="save()" >Cadastrar</ion-button>
+        <ion-button color="danger">Cancelar</ion-button>
+      </ion-item>
+    </ion-list>
+    <!-- {{user.nome}} -->
+
+  </form>
+</ion-content>

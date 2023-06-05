@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <h1>Cadastro de produtos</h1>
+  <form #fc="ngForm">
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label-placement="floating" required fill="outline" label="Nome do produto" name="nome" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+          [(ngModel)]="product.nome"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input type="string" label-placement="floating" required fill="outline" label="Categoria do produto" name="categoria"
+          pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" [(ngModel)]="product.categoria"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label-placement="floating" required fill="outline" label="Descrição do produto" name="descricao" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+          [(ngModel)]="product.descricao"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label-placement="floating" required fill="outline" label="Quantidade" type="number" name="quant" pattern="^[1-9][0-9]{0,3}$"
+          [(ngModel)]="product.quant"></ion-input>
+      </ion-item>
+      <ion-list>
+        <ion-item class="pt-10">
+          <ion-input label-placement="floating" required fill="outline" label="valor do produto" name="valor" pattern="^[1-9][0-9]{0,3}$"
+            [(ngModel)]="product.valor"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+          <ion-item class="pt-10">
+            <ion-input label-placement="floating" required fill="outline" label="Foto do produto" name="valor"
+              [(ngModel)]="product.foto"></ion-input>
+          </ion-item>
+        </ion-list>
+      <ion-item class="pt-10">
+        <ion-button size="small" (click)="save()">Cadastrar</ion-button>
+        <ion-button color="danger">Cancelar</ion-button>
+      </ion-item>
+    </ion-list>
